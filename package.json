@@ -1,0 +1,15 @@
+{
+  "name": "vercel-drizzle-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/postgres": "^0.7.2",
+    "drizzle-orm": "^0.29.3"
+  }
+}
