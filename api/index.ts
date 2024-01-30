@@ -1,10 +1,6 @@
 import { drizzle } from 'drizzle-orm/vercel-postgres';
 import { sql } from '@vercel/postgres';
-import {
-  pgTable,
-  serial,
-  text,
-} from 'drizzle-orm/pg-core';
+import { pgTable, serial, text } from 'drizzle-orm/pg-core';
 
 export const db = drizzle(sql);
 
@@ -14,7 +10,7 @@ export const users = pgTable('users', {
 });
 
 export default async (req: Request, ctx: any) => {
-  const result = db.select().from(users);
+  const result = await db.select().from(users);
   return new Response(JSON.stringify(result, null, 2));
 }
 
